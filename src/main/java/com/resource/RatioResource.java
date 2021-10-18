@@ -4,6 +4,7 @@ import com.dao.CaseData;
 import com.dao.HospData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -22,6 +23,7 @@ public class RatioResource {
     @Autowired
     private WebClient.Builder webClientBuilder;
 
+    @CrossOrigin
     @GetMapping("/ratio/case-hosp")
     public List<Double> getCaseHospitalizationRatio() {
 
